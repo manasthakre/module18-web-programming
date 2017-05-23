@@ -3,16 +3,22 @@
 
 //Use a D3 selector to select the element with an id of `circleA`
 //Use JavaScript to give this element a `fill` attribute of '#5f5f5f'
-
+var circle1 = d3. select('#circleA');
+circle1.attr('fill', '#5f5f5f');
 
 //Give the element with an id of `circleB` the following attributes:
 //  cx:375, cy:130, fill:'#5f5f5f'
 //Use method chaining!
-
+var circle2 = d3. select('circleB')
+.attr('cx', 375)
+.attr('cy', 130 )
+.attr ('fill','#5f5f5f');
 
 //Give all <path> elements a `stroke` attribute of `#5f5f5f` and
 //a `stroke-width` of `8` (pixels)
-
+var shape = d3.selectAll('path')
+.attr('stroke', "#5f5f5f")
+.attr('stroke-width', 8)
 
 //Give all <circle> elements in the <g> with id of `group1` a fill color of 'white'
 //Hint: first select the group, then select the circles _inside_ that group.
