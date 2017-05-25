@@ -4,17 +4,30 @@
 //Add an event listener to the image so that when the mouse enters ('mouseenter')
 //its `src` changes to 'img/surprised.png'
 
+var button = d3.select ('#purplize')
 
+button.on ('mouseenter', function(){
+    d3.select('#face')
+    .attr('src', 'img/surprised.png')
+    console.log('img/surprised')
+})
 
 //Add an event listener to the image so that when the mouse leaves ('mouseleave')
 //its source changes back to `img/happy.png'
 
-
+button.on ('mouseleave', function(){
+    d3.select('#face')
+    .attr('src', 'img/happy.png')
+    console.log('img/surprised')
+})
 
 //Add an event listener to the #purplize button to respond to user clicks.
 //When the user clicks the button, add the CSS class `purple` to the `<body>`
 //Use the `classed()` method: https://github.com/d3/d3-selection#selection_classed
 
+button.on ('click', function(){
+    d3.select('purple')
+})
 
 
 //Add an event listener to the #addButton so that when it is clicked,
